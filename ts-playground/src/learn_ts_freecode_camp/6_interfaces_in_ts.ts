@@ -3,11 +3,11 @@
 //     name: string;
 //     age: number;
 // }
-
+//
 // const sayHi = (person: Person) => {
 //     console.log(`Hi ${person.name}!`);
 // };
-
+//
 // sayHi({
 //     name: "Yavor",
 //     age: 26
@@ -19,11 +19,11 @@
 //     name: string;
 //     age: number;
 // };
-
+//
 // const sayHi = (person: Person) => {
 //     console.log(`Hi ${person.name}!`);
 // };
-
+//
 // sayHi({
 //     name: "Yavor",
 //     age: 26
@@ -34,7 +34,7 @@
 // const sayHi = (person: {name: string; age: number}) => {
 //     console.log(`Hi ${person.name}!`);
 // };
-
+//
 // sayHi({
 //     name: "Yavor",
 //     age: 26
@@ -54,11 +54,11 @@
 // interface Animal {
 //     name: string
 // }
-
+//
 // interface Bear extends Animal {
 //     honey: boolean
 // }
-
+//
 // const bear: Bear = {
 //     name: "Winnie",
 //     honey: true
@@ -69,11 +69,11 @@
 // type Animal = {
 //     name: string
 // }
-
+//
 // type Bear = Animal & {
 //     honey: boolean
 // }
-
+//
 // const bear: Bear = {
 //     name: "Winnie",
 //     honey: true
@@ -84,17 +84,16 @@
 // interface Animal {
 //     name: string
 // }
-
+//
 // // Re-opening the Animal interface to add a new field
 // interface Animal {
 //     tail: boolean
 // }
-
+//
 // const dog: Animal = {
 //     name: "Bruce",
 //     tail: true
 // }
-
 
 // === Interface function signatures
 // Interface is only used by TypeScript, not JavaScript. This means that it won't get compiled and add bloat to JS. 
@@ -105,26 +104,26 @@
 //     age: number;
 //     speak(sentence: string): void
 // }
-
-
+//
+//
 // const person1: Person = {
 //     name: "John",
 //     age: 48,
 //     speak: sentence => console.log(sentence)
 // }
-
+//
 
 // === Implementing interfaces
 // interface HasFormatter {
 //     format(): string;
 // }
-
+//
 // class Person implements HasFormatter {
 //     constructor(
 //         public username: string,
 //         protected password: string
 //     ) {}
-
+//
 //     format = () => {
 //         return this.username.toLocaleLowerCase()
 //     };

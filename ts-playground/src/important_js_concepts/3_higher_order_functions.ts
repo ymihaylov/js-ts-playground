@@ -1,8 +1,8 @@
 // === Call Back Function
 
-const add = (a: number, b: number) => {
-	return a + b;
-}
+// const add = (a: number, b: number) => {
+// 	return a + b;
+// }
 
 const subs = (a: number, b: number) => {
 	return Math.abs(a - b);

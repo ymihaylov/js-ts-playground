@@ -7,10 +7,10 @@ const MyFavColors = [...colors, 'yellow', 'black'];
 console.log(MyFavColors);
 
 // === Objects
-let person: {firstname: string, lastname: string, age?: number} = {
-	firstname: "Yavor",
-	lastname: "Mihaylov"
-};
-
-person = {...person, age: 5};
-console.log(person);
+// // let person: {firstname: string, lastname: string, age?: number} = {
+// // 	firstname: "Yavor",
+// // 	lastname: "Mihaylov"
+// // };
+// //
+// // person = {...person, age: 5};
+// console.log(person);

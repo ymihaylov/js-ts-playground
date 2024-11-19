@@ -26,8 +26,8 @@
 //     location: string,
 //     isDev: boolean
 // };
-
-// let person1: Person = {
+//
+// let person2: Person = {
 //     name: "Yavor",
 //     location: "UK",
 //     isDev: true

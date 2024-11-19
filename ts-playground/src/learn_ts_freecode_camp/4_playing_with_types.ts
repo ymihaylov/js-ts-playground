@@ -7,7 +7,6 @@
 // age = 5;
 // age = "5";
 
-
 // === Dynamic (any) types
 // Using the any type, we can basically revert back into JavaScript
 // let age: any = '100';
@@ -20,27 +19,27 @@
 // It's recommended to avoid any type
 
 // === Type Aliases
-type StringOrNumber = string | number;
-
-type PersonObject = {
-    name: string;
-    id: StringOrNumber;
-    // func: () => void
-};
-
-const person1: PersonObject = {
-    name: "Yavor",
-    id: 1,
-};
-
-const person2: PersonObject = {
-    name: "Kali",
-    id: 2
-};
-
-const sayHello = (person: PersonObject): string => {
-    return `Hello ${person.name}`;
-};
+// type StringOrNumber = string | number;
+//
+// type PersonObject = {
+//     name: string;
+//     id: StringOrNumber;
+//     // func: () => void
+// };
+//
+// const person1: PersonObject = {
+//     name: "Yavor",
+//     id: 1,
+// };
+//
+// const person2: PersonObject = {
+//     name: "Kali",
+//     id: 2
+// };
+//
+// const sayHello = (person: PersonObject): string => {
+//     return `Hello ${person.name}`;
+// };
 
 // ==== The DOM and type casting
 // Here we are telling TypeScript that we are certain that this anchor tag exists

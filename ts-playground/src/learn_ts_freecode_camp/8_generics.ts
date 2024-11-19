@@ -2,13 +2,13 @@
 // Create a component that can work over a variety of types
 // const addID = (obj: object) => {
 //     let id = Math.floor(Math.random() * 1000);
-
+//
 //     return { ...obj, id };
 // };
-
+//
 // let personTest = addID({ name: 'John', age: 40 });
-
-// console.log("Person ID" + personTest.id); // 271
+//
+// console.log("Person ID " + personTest.id); // 271
 // console.log("Person name" + personTest.name); // ERROR: Property 'name' does not exist on type
 
 // Error appear because TypeScript has no idea what properties the object has (it hasn't captured them).
@@ -19,16 +19,16 @@
 // T is only convention
 // const addId = <T>(obj: T) => {
 //     let id = Math.floor(Math.random() * 1000);
-
+//
 //     return { ...obj, id };
 // }
 
 // let personTest = addId({ name: 'John', age: 40 });
-
+//
 // console.log(person1.id); // 271
 // console.log(person1.name); // It's fine now
 
-// // But we have a problem again - anything can be passed now
+// But we have a problem again - anything can be passed now
 // let personTest2 = addId('Sally'); // Pass string - no problem
 // console.log(personTest2);
 // console.log(personTest2.id); // 271
@@ -38,7 +38,7 @@
 // === Generics extend
 // const addId = <T extends object>(obj: T) => {
 //     let id = Math.floor(Math.random() * 1000);
-
+//
 //     return {...obj, id};
 // }
 
@@ -63,7 +63,7 @@ const addId = <T extends {name: string}>(obj: T) => {
 
 // === Explicitly stated what type the argument should be.
 // Not necessary most of the time. TypeScript will infer it
-let personTest1 = addId<{name: string, age: number}>({name: 'John', age: 40});
+// let personTest1 = addId<{name: string, age: number}>({name: 'John', age: 40});
 
 
 //  === The issue with any
@@ -94,32 +94,32 @@ let personTest1 = addId<{name: string, age: number}>({name: 'John', age: 40});
 
 
 // === Solution - use a generic that extends an interface that ensures every argument passed in has a length property
-interface hasLength {
-    length: number;
-}
-
-let logLength = <T extends hasLength>(a: T) => {
-    console.log(a.length);
-    return a;
-}
-
-let hello = 'Hello World';
-logLength(hello);
-
-let howMany = 8;
-// logLength(howMany); // Error, number doesn't have length property
-
-// Function where the argument is an arrray of elements that all have length property
-let logLengths = <T extends hasLength>(a: T[]) => {
-    a.forEach((element) => {
-        logLength(element);
-    });
-};
-
-let list = [
-    'This string has a length prop',
-    ['This', 'arr', 'has', 'length'],
-    {material: 'plastic', length: 30}
-];
-
-logLengths(list);
+// interface hasLength {
+//     length: number;
+// }
+//
+// let logLength = <T extends hasLength>(a: T) => {
+//     console.log(a.length);
+//     return a;
+// }
+//
+// let hello = 'Hello World';
+// logLength(hello);
+//
+// let howMany = 8;
+// // logLength(howMany); // Error, number doesn't have length property
+//
+// // Function where the argument is an arrray of elements that all have length property
+// let logLengths = <T extends hasLength>(a: T[]) => {
+//     a.forEach((element) => {
+//         logLength(element);
+//     });
+// };
+//
+// let list = [
+//     'This string has a length prop',
+//     ['This', 'arr', 'has', 'length'],
+//     {material: 'plastic', length: 30}
+// ];
+//
+// logLengths(list);

@@ -1,4 +1,5 @@
 // === Enums 101
+
 // enum ResourceType {
 //     BOOK,
 //     AUTHOR,
@@ -6,7 +7,7 @@
 //     DIRECTOR,
 //     PERSON
 // }
-
+//
 // console.log(ResourceType.BOOK); // 0
 // console.log(ResourceType.AUTHOR); // 1
 

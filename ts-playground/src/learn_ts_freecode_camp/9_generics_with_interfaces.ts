@@ -7,13 +7,13 @@
 //     age: number;
 //     documents: T;
 // }
-
+//
 // const person1: Person<string[]> = {
 //     name: 'Yavor',
 //     age: 30,
 //     documents: ['passport', 'bank statement', 'visa']
 // };
-
+//
 // const person2: Person<string> = {
 //     name: 'Dalia',
 //     age: 46,

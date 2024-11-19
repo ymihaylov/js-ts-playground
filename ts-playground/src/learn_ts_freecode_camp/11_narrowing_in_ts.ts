@@ -2,18 +2,17 @@
 // In TS, a variable can move from a less precise type to a more precise type.
 // This process is called type narrowing
 
-// function addAnother(val: string | number) {
-//     if (typeof val === 'string') {
-//         // TS treats val as string in this block
-//         return val.concat(' ' + val);
-//     }
+function addAnother(val: string | number) {
+    if (typeof val === 'string') {
+        // TS treats val as string in this block
+        return val.concat(' ' + val);
+    }
 
-//     return val  + val; // TS knows val is number here. Doesn't allow to use str methods
-// }
+    return val  + val; // TS knows val is number here. Doesn't allow to use str methods
+}
 
-// console.log(addAnother('Woo')); 
+// console.log(addAnother('Woo'));
 // console.log(addAnother(1));
-
 
 // === Another example
 interface Vehicle {
